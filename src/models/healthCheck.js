@@ -1,5 +1,4 @@
 import { DataTypes } from 'sequelize';
-// const { sequelize } = require('.');
 
 const healthCheckModel = sequelize => {
   const healthCheck = sequelize.define(

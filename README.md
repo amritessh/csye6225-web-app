@@ -1,4 +1,8 @@
 # CSYE6225 Health Check API
+brew services start postgresql@17
+brew services stop postgresql@17
+curl -v http://localhost:8080/healthz
+
 
 Cloud-native Node.js web application implementing a health check API endpoint using Express, Sequelize, and PostgreSQL following enterprise-standard architecture patterns.
 
