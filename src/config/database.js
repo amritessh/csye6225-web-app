@@ -11,6 +11,9 @@ const sequelize = new Sequelize({
   port: process.env.DB_PORT,
   dialect: 'postgres',
   timezone: '+00:00',
+  dialectOptions: {
+    timezone: 'UTC'
+  },
   logging: false,
   pool: {
     max: 5,

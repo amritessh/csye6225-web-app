@@ -3,7 +3,9 @@ import { HealthCheck } from '../models/index.js';
 export const addHealthCheckEntry = async () => {
   try {
     const dbStart = Date.now();
-    const newHealthCheck = await HealthCheck.create();
+    const newHealthCheck = await HealthCheck.create({
+      check_datetime: new Date()
+    });
 
     const insertDuration = Date.now() - dbStart;
     console.log(

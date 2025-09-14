@@ -13,7 +13,6 @@ const healthCheckModel = sequelize => {
       check_datetime: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: DataTypes.NOW,
         field: 'check_datetime'
       }
     },
