@@ -3,7 +3,7 @@ import HealthController from '../controllers/healthController.js';
 
 const router = express.Router();
 
-router.get('/healthz', HealthController.checkHealth);
-router.all('/healthz', HealthController.handleUnsupportedMethod);
+router.get('/', HealthController.checkHealth);
+router.all('/', HealthController.handleUnsupportedMethod);
 
 export default router;

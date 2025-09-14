@@ -1,18 +1,16 @@
 import express from 'express';
 import { sequelize } from './models/index.js';
-import healthRoutes from './routes/health.js';
+import routes from './routes/index.js';
 
 const app = express();
 
 app.use(express.json());
-app.use('', healthRoutes);
+app.use('', routes);
 
-// Catch-all handler for undefined routes
 app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// Simple database initialization - inline
 (async () => {
   try {
     await sequelize.authenticate();
